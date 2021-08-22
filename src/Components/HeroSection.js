@@ -12,7 +12,7 @@ function HeroSection({ isVid, vid, img, title, subtitle, btnText }) {
         <img src={img404} alt="bg" />
       )}
       {/* <video src={vid} autoPlay loop muted /> */}
-
+      {/* <img src={img404} alt="bg" /> */}
       <h1>{title}</h1>
       <p>{subtitle}</p>
       <div className="hero-btns">
