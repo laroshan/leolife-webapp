@@ -1,21 +1,27 @@
 import React from "react";
-import video1 from "../videos/leolifevideo1.mp4";
 import { Button } from "./Button";
 import "./HeroSection.css";
+import img404 from "../images/404.jpg";
 
-function HeroSection() {
+function HeroSection({ isVid, vid, img, title, subtitle, btnText }) {
   return (
     <div className="hero-container">
-      <video src={video1} autoPlay loop muted />
-      <h1>Welcome To LD LeoLife</h1>
-      <p>Let's Do Shopping</p>
+      {{ isVid } ? (
+        <video src={vid} autoPlay loop muted />
+      ) : (
+        <img src={img404} alt="bg" />
+      )}
+      {/* <video src={vid} autoPlay loop muted /> */}
+
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
       <div className="hero-btns">
         <Button
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--large"
         >
-          GET STARTED
+          {btnText}
         </Button>
       </div>
     </div>
