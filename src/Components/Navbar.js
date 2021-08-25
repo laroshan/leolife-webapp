@@ -5,6 +5,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "./Button";
 import "./Navbar.css";
 import LeoLogo from "../images/LeoLife.svg";
+import styled from "styled-components";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -31,7 +32,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbars">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img src={LeoLogo} alt="logo" />
           LD LeoLife
