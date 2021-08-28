@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSection from "../Components/HeroSection";
+import FeaturedProducts from "../Components/HomePage/FeaturedProducts";
 // import video1 from "../videos/leolifevideo1.mp4";
 import img1 from "../images/404.jpg";
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
         subtitle="Let's Do Shopping"
         btnText="Get Started"
       />
+      <FeaturedProducts />
     </>
   );
 }

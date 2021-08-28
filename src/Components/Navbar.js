@@ -5,7 +5,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "./Button";
 import "./Navbar.css";
 import LeoLogo from "../images/LeoLife.svg";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 function Navbar() {
   const [click, setClick] = useState(false);
