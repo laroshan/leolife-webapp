@@ -36,6 +36,5 @@ export default HeroSection;
 
 const HeroWrapper = styled.div`
   .hero-container {
-    background: url("../images/IMG_3.jpeg") center center/cover no-repeat;
   }
 `;

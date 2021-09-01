@@ -13,17 +13,23 @@ function FeaturedProducts() {
         <div className="row my-5">
           <ProductConsumer>
             {(value) => {
-              const { featuredProducts } = value;
-              return featuredProducts.map((product) => (
-                <Product key={product.id} product={product} />
-                // <CustomCard key={product.id} product={product} />
-              ));
+              const { storedProducts } = value;
+              return storedProducts
+                .filter((filterproduct) => filterproduct.sku === "hello")
+                .map(
+                  (product) => <Product key={product.id} product={product} />
+                  // console.log(product);
+                );
+
+              // <CustomCard key={product.id} product={product} />
             }}
           </ProductConsumer>
         </div>
         <div className="row mt-5">
-          <div className="col text-center">
-            <Link to="/products">Products</Link>
+          <div className="col text-center my-5">
+            <Link to="/products" className="main-link">
+              More Products
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { items } from "./productData";
+// import { items } from "./productData";
+import { commerce } from "./commerce";
 
 const ProductContext = React.createContext();
 
@@ -9,6 +10,7 @@ class ProductProvider extends Component {
     cartItms: 0,
     cartTotal: 0,
     storedProducts: [],
+    categories: [],
     filteredProducts: [],
     featuredProducts: [],
     singleProduct: [],
@@ -16,38 +18,51 @@ class ProductProvider extends Component {
   };
 
   componentDidMount() {
-    this.setProducts(items);
+    this.fetchProducts();
+    this.fetchCategories();
   }
 
-  setProducts = (products) => {
-    let storedProducts = products.map((item) => {
-      const { id } = item.sys;
-      const image = item.fields.image.fields.file.url;
-      const product = { id, ...item.fields, image };
-      return product;
-    });
+  fetchProducts() {
+    commerce.products
+      .list({ limit: 200 })
+      .then((products) => {
+        const storedProducts = products.data;
 
-    let featuredProducts = storedProducts.filter(
-      (item) => item.featured === true
-    );
+        this.setState({
+          storedProducts,
+        });
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the products", error);
+      });
+  }
+
+  async fetchCategories() {
+    const { data: products } = await commerce.products.list({ limit: 200 });
+    const { data: categories } = await commerce.categories.list();
+    const productsPerCategory = categories.reduce((acc, category) => {
+      return [
+        ...acc,
+        {
+          ...category,
+          productsData: products.filter((product) =>
+            product.categories.find((cat) => cat.id === category.id)
+          ),
+        },
+      ];
+    }, []);
 
     this.setState({
-      storedProducts,
-      filteredProducts: storedProducts,
-      featuredProducts,
-      // cart: this.getStorageCart(),
-      // singleProduct: this.getStorageProduct(),
-      loading: false,
+      categories: productsPerCategory,
     });
-  };
+  }
 
   setSingleProduct = (id) => {
     const product = this.state.storedProducts.find((item) => item.id === id);
-    console.log(product);
+    // console.log(product);
     this.setState({
       singleProduct: product,
     });
-    console.log(this.state.singleProduct);
   };
 
   render() {

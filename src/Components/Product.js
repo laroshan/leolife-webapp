@@ -3,35 +3,36 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ProductConsumer } from "../context/context";
 function Product({ product }) {
-  console.log(product);
   return (
     <ProductConsumer>
       {(value) => {
         const { setSingleProduct } = value;
         return (
-          <ProductWrapper className="col-10 mx-auto col-sm-8 col-md-6 col-lg-3 my-3">
-            <Link
-              to={`/products/${product.id}`}
-              onClick={() => {
-                setSingleProduct(product.id);
-              }}
-            >
-              <div className="card">
+          <ProductWrapper
+            className="col-10 mx-auto col-sm-8 col-md-6 col-lg-3 my-3"
+            style={{ textDecoration: "none" }}
+          >
+            <div className="card">
+              <Link
+                to={`/products/${product.id}`}
+                onClick={() => {
+                  setSingleProduct(product.id);
+                }}
+              >
                 <div className="img-container">
                   <img
-                    src={product.image}
+                    src={product.assets[0].url}
                     className="card-img-top p-5"
                     alt="product"
-                    style={{ height: "300px" }}
+                    // style={{ height: "300px" }}
                   />
                 </div>
-
-                <div className="card-body d-flex justify-content-between">
-                  <p className="mb-0">{product.title}</p>
-                  <p className="mb-0 text-main">{product.price}.Rs</p>
-                </div>
+              </Link>
+              <div className="card-body d-flex justify-content-between">
+                <p className="mb-0">{product.name}</p>
+                <p className="mb-0 ">{product.price.formatted} Rs</p>
               </div>
-            </Link>
+            </div>
           </ProductWrapper>
         );
       }}
@@ -43,16 +44,17 @@ export default Product;
 
 const ProductWrapper = styled.div`
   .card {
-    background-color: #21262d;
-    color: #c9d1d9;
+    background-color: var(--mainWhite);
+    color: var(--SoftWheat);
+    font-weight: bold;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
     transition: var(--mainTransition);
     height: 100%;
+    border: none;
   }
 
   .card:hover {
-    box-shadow: 7px 10px 5px 0px #03dac5;
-    cursor: pointer;
+    box-shadow: 7px 10px 5px 0px var(--Lightgrey);
   }
 
   .card-img-top {
@@ -66,16 +68,14 @@ const ProductWrapper = styled.div`
 
   .img-container {
     position: relative;
+    height: 300px;
   }
-  /* .icon {
-    transition: var(--mainTransition);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: none;
+
+  .img-container:hover {
+    cursor: pointer;
   }
-  .card:hover icon{
-      font-size: 2.5rem;
-      display: ;
-  } */
+  .text-title {
+    text-decoration: none;
+    border: none;
+  }
 `;

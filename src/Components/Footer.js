@@ -63,9 +63,9 @@ export default Footer;
 
 const FooterContainer = styled.footer`
   .footer-middle {
-    background: var(--mainBlack);
+    background: var(--Whitish);
     padding-top: 2rem;
-    color: var(--mainWhite);
+    color: var(--Goldenwheat);
   }
   .footer-bottom {
     padding-top: 2rem;
@@ -73,6 +73,12 @@ const FooterContainer = styled.footer`
   }
 
   ul li a {
-    color: var(--mainGrey);
+    color: var(--Goldenwheat);
+    text-decoration: none;
+  }
+
+  a:hover {
+    border-bottom: 2px solid var(--SecondhandGrey);
+    transition: all 0.2s ease-out;
   }
 `;

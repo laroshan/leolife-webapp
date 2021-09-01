@@ -34,7 +34,7 @@ function Navbar() {
     <>
       <nav className="navbars">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <img src={LeoLogo} alt="logo" />
+          <img src={LeoLogo} alt="logo" className="logo-img" />
           LD LeoLife
         </Link>
         <div className="menu-icon" onClick={handleClick}>
@@ -74,7 +74,7 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-        {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
+        {/* {button && <Button buttonStyle="btn--outline">SIGN UP</Button>} */}
       </nav>
     </>
   );
