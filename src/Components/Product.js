@@ -9,7 +9,7 @@ function Product({ product }) {
         const { setSingleProduct } = value;
         return (
           <ProductWrapper
-            className="col-10 mx-auto col-sm-8 col-md-6 col-lg-3 my-3"
+            className="col-6 mx-auto col-sm-8 col-md-6 col-lg-3 my-3"
             style={{ textDecoration: "none" }}
           >
             <div className="card">
@@ -22,7 +22,7 @@ function Product({ product }) {
                 <div className="img-container">
                   <img
                     src={product.assets[0].url}
-                    className="card-img-top p-5"
+                    className="card-img-top"
                     alt="product"
                     // style={{ height: "300px" }}
                   />
@@ -30,7 +30,7 @@ function Product({ product }) {
               </Link>
               <div className="card-body d-flex justify-content-between">
                 <p className="mb-0">{product.name}</p>
-                <p className="mb-0 ">{product.price.formatted} Rs</p>
+                <p className="mb-0 price">{product.price.formatted}</p>
               </div>
             </div>
           </ProductWrapper>
@@ -77,5 +77,27 @@ const ProductWrapper = styled.div`
   .text-title {
     text-decoration: none;
     border: none;
+  }
+
+  img {
+    height: 100%;
+    padding: 20px;
+  }
+  @media screen and (max-width: 960px) {
+    .img-container {
+      height: 190px;
+    }
+
+    img {
+      height: 100%;
+      padding: 5px;
+    }
+
+    .card-body {
+      font-size: 12px;
+    }
+    .price {
+      font-size: 11px;
+    }
   }
 `;

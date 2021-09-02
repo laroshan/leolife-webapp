@@ -60,9 +60,22 @@ class ProductProvider extends Component {
   setSingleProduct = (id) => {
     const product = this.state.storedProducts.find((item) => item.id === id);
     // console.log(product);
+    // localStorage.removeItem();
+
     this.setState({
       singleProduct: product,
     });
+    localStorage.setItem("product", JSON.stringify(product));
+  };
+
+  getSingleProduct = () => {
+    let product;
+    if (localStorage.getItem("product")) {
+      product = JSON.parse(localStorage.getItem("product"));
+    } else {
+      product = [];
+    }
+    return product;
   };
 
   render() {

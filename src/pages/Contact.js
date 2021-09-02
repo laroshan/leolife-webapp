@@ -5,7 +5,7 @@ import img from "../images/Contact.jpg";
 function Contact() {
   return (
     <section>
-      <HeroSectionImg img={img} max={false} />
+      <HeroSectionImg img={img} max={false} mobImg={img} />
       <div className="container py-2">
         <div className="row">
           <div className="col-10 mx-auto col-md-6 my-3">

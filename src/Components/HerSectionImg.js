@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import mainBcg from "../images/IMG_3.jpeg";
 
-function HeroSectionImg({ img, title, max, children }) {
+function HeroSectionImg({ img, mobImg, title, max, children }) {
   return (
-    <HeroWrapper max={max} img={img}>
+    <HeroWrapper max={max} img={img} mobImg={mobImg}>
       <div className="banner">
         <div className="title">{title}</div>
         {children}
@@ -31,8 +31,16 @@ const HeroWrapper = styled.div`
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
   }
+
+  @media screen and (max-width: 960px) {
+    background: linear-gradient(var(--primaryRGBA), var(--primaryRGBA)),
+      url(${(props) => props.mobImg}) center/cover no-repeat;
+  }
 `;
 
 HeroSectionImg.defaultProps = {
   img: mainBcg,
+};
+HeroSectionImg.defaultProps = {
+  mobImg: mainBcg,
 };

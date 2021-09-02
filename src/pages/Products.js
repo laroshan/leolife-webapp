@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSectionImg from "../Components/HerSectionImg";
 import ProductBcg from "../images/cleaningheader.png";
+import mobileBg from "../images/colorful-cleaning.jpg";
 import { ProductConsumer } from "../context/context";
 import TitleComponent from "../Components/TitleComponent";
 import styled from "styled-components";
@@ -9,7 +10,7 @@ import Product from "../Components/Product";
 function Products() {
   return (
     <div>
-      <HeroSectionImg img={ProductBcg} max={false} />
+      <HeroSectionImg img={ProductBcg} max={false} mobImg={mobileBg} />
       <div className="container-fluid py-4 ">
         <TitleComponent title={"Our Products"} center={true} />
 
@@ -17,7 +18,7 @@ function Products() {
           {(value) => {
             const { categories } = value;
             return (
-              <ProductsWrapper className="py-3">
+              <ProductsWrapper className="py-3 px-0">
                 {categories.map((category, index) => {
                   return (
                     <div

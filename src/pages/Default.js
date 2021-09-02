@@ -7,7 +7,7 @@ function Default() {
   return (
     <div>
       <HeroSectionImg max={true} title="There was en error" img={img}>
-        <h2 className="text-uppercase">page not found</h2>
+        <h2 className="text-uppercase pb-4 pt-2">page not found</h2>
         <Link to="/" className="main-link">
           return home
         </Link>

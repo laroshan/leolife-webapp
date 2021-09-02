@@ -1,6 +1,8 @@
 import React from "react";
 import { Switch, Link } from "react-router-dom";
 import styled from "styled-components";
+import { faPhoneSquare, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Footer() {
   return (
@@ -16,7 +18,19 @@ function Footer() {
                   <li>No.14, Circular Road.</li>
                   <li>Hatton.</li>
                   <li>Sri Lanka.</li>
-                  <li>077-346-8913</li>
+                  <li>
+                    {" "}
+                    <FontAwesomeIcon icon={faPhoneSquare} className="mx-1" />
+                    077-346-8913
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faPhoneSquare} className="mx-1" />
+                    051-222-5770
+                  </li>
+                  <li>
+                    <FontAwesomeIcon icon={faEnvelope} className="mx-1" />
+                    ldleolife@gmail.com
+                  </li>
                 </ul>
               </div>
               <Switch>
@@ -29,7 +43,6 @@ function Footer() {
                     <li>
                       <Link to="/about">About Us</Link>
                     </li>
-                    <li>Email</li>
                   </ul>
                 </div>
               </Switch>
@@ -38,10 +51,21 @@ function Footer() {
                 <h4>Social Networks</h4>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="www.facebook.com">FaceBook</a>
+                    <i class="fa fa-facebook" aria-hidden="false">
+                      <a
+                        href="https://www.facebook.com/ldleolife"
+                        target="_blank"
+                      >
+                        Facebook
+                      </a>
+                    </i>
                   </li>
                   <li>
-                    <a href="www.instagram.com">Instagram</a>
+                    <i class="fa fa-instagram" aria-hidden="true">
+                      <a href="https://www.instagram.com" target="_blank">
+                        Instagram
+                      </a>
+                    </i>
                   </li>
                 </ul>
               </div>

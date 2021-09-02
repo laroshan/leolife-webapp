@@ -11,7 +11,14 @@ function SingleProductPage() {
     <SingleProductWrapper>
       <ProductConsumer>
         {(value) => {
-          const { singleProduct } = value;
+          let singleProduct;
+          if (localStorage.getItem("product")) {
+            singleProduct = JSON.parse(localStorage.getItem("product"));
+          } else {
+            singleProduct = [];
+          }
+          // const { getSingleProduct } = value;
+          // const singleProduct = getSingleProduct();
           console.log(singleProduct);
           const imagesArray = singleProduct.assets.map((images) => images.url);
           let variants = [];
@@ -25,7 +32,7 @@ function SingleProductPage() {
           return (
             <div className="container-fluid">
               <div className="row">
-                <div className="col-10 mx-auto col-sm-8 col-md-6  img-window">
+                <div className="col-10 mx-auto col-sm-8 col-md-6 pt-5  img-window">
                   <Carousel
                     dynamicHeight={true}
                     // width="400px"
