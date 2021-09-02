@@ -2,7 +2,11 @@ import React from "react";
 import TitleComponent from "../TitleComponent";
 import leologo from "../../images/LeoLife01.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhoneSquare, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhoneSquare,
+  faEnvelope,
+  faHome,
+} from "@fortawesome/free-solid-svg-icons";
 
 // import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,41 +26,49 @@ function Info() {
           </div>
           <div className="col-10 mx-auto col-md-6 my-3">
             <TitleComponent title={"About Us"} center={true} />
-
-            <p className="text-lead  my-3 d-flex justify-content-start">
-              We’re driven by our purpose: to make sustainable living
-              commonplace.
+            <p className="blockquote  my-3 d-flex justify-content-center info-quote">
+              "Happiness Is A Clean And Oragnized Home"
             </p>
-
-            <p className="text-lead  my-3 d-flex justify-content-start">
-              We are the leading providers in home care products for your every
-              kind of need.
+            <p className="text-lead ">
+              <strong>We’re driven by our purpose:</strong> to make sustainable
+              living commonplace. <br />
+              We aim to provide home care products for your every kind of need
+              to setup your home as a better place.
             </p>
-            <p className="text-lead  my-3 d-flex justify-content-start">
+            <br />
+
+            <p className="text-main  my-3 d-flex justify-content-start">
+              <FontAwesomeIcon icon={faHome} className="mx-2 " />
               No.14, Circular Road, Hatton.
             </p>
 
-            <p className="text-lead  my-3 d-flex justify-content-start">
+            <p className="text-main  my-3 d-flex justify-content-start">
               <FontAwesomeIcon icon={faPhoneSquare} className="mx-2 " />
               0512225770
             </p>
 
-            <p className="text-lead  my-3 d-flex justify-content-start">
+            <p className="text-main  my-3 d-flex justify-content-start">
               <FontAwesomeIcon icon={faPhoneSquare} className="mx-2" />
               0773462913
             </p>
-            <p className="text-lead  my-3 d-flex justify-content-start">
+            <p className="text-main my-3 d-flex justify-content-start">
               {" "}
               <FontAwesomeIcon icon={faEnvelope} className="mx-2 " />
               ldleolife@gmail.com
             </p>
           </div>
         </div>
-        <div className="row info-box">
-          <div className="col-10 mx-auto col-sm-6 col-md-6 col-lg-4">
-            <p>0773462913</p>
+        {/* <div className="row info-box">
+          <div className="col-6 mx-auto col-sm-8 col-md-6 col-lg-4 info-col">
+            <p className="info-txt">0773462913</p>
           </div>
-        </div>
+          <div className="col-6 mx-auto col-sm-8 col-md-6 col-lg-4 info-col">
+            <p className="info-txt">0773462913</p>
+          </div>
+          <div className="col-6 mx-auto col-sm-8 col-md-6 col-lg-4 info-col">
+            <p className="info-txt">0773462913</p>
+          </div>
+        </div> */}
       </div>
     </InfoWrapper>
   );
@@ -69,11 +81,22 @@ const InfoWrapper = styled.div`
     font-size: 25px;
     justify-content: baseline;
     align-items: baseline;
-  }
-  .info-box {
-    background: var(--mainBg);
+    font-weight: 700;
   }
 
+  .text-main {
+    font-size: 20px;
+    justify-content: baseline;
+    align-items: baseline;
+    font-weight: 500;
+  }
+
+  .info-quote {
+    color: var(--mainBg);
+    font-weight: 900;
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
   /* .media:screen(width:960px){
 
   } */
