@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "./Button";
 import "./Navbar.css";
 import LeoLogo from "../images/LeoLife.svg";
 // import styled from "styled-components";
@@ -62,15 +61,6 @@ function Navbar() {
               onClick={closeMobileMenu}
             >
               Products
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/sign-up"
-              className="nav-links-mobile"
-              onClick={closeMobileMenu}
-            >
-              SignUp
             </Link>
           </li>
         </ul>

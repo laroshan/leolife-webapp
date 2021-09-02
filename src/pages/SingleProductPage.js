@@ -33,7 +33,7 @@ function SingleProductPage() {
                   >
                     {imagesArray.map((image) => (
                       <div>
-                        <img src={image} className="img-fluid" />
+                        <img src={image} className="img-fluid" alt="images" />
                       </div>
                     ))}
                   </Carousel>
@@ -55,7 +55,7 @@ function SingleProductPage() {
                     Some info about product:
                   </p>
                   <p className="text-main description">
-                    {singleProduct.description}
+                    {singleProduct.description.replace(/<[^>]+>/g, "")}
                   </p>
 
                   <div className="container">

@@ -23,10 +23,17 @@ function Products() {
                     <div
                       className="row py-5 "
                       style={{
-                        background: index % 2 == 0 ? "#2b6777" : "#c8d8e4",
+                        background: index % 2 === 0 ? "#2b6777" : "#c8d8e4",
                       }}
                     >
-                      <h2>{category.name}</h2>
+                      <h2
+                        className="text-title"
+                        style={{
+                          color: index % 2 === 0 ? "#c8d8e4" : "#2b6777",
+                        }}
+                      >
+                        {category.name}
+                      </h2>
                       {category.productsData.map((product) => {
                         return <Product key={product.id} product={product} />;
                       })}
@@ -44,4 +51,9 @@ function Products() {
 
 export default Products;
 
-const ProductsWrapper = styled.div``;
+const ProductsWrapper = styled.div`
+  .text-title {
+    margin-left: 30px;
+    font-size: 450x;
+  }
+`;
