@@ -27,7 +27,7 @@ function Info() {
           <div className="col-10 mx-auto col-md-6 my-3">
             <TitleComponent title={"About Us"} center={true} />
             <p className="blockquote  my-3 d-flex justify-content-center info-quote">
-              "Happiness Is A Clean And Oragnized Home"
+              "Happiness is a Clean & Oragnized Home"
             </p>
             <p className="text-lead ">
               <strong>We’re driven by our purpose:</strong> to make sustainable

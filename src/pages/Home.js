@@ -7,6 +7,7 @@ import FeaturedProducts from "../Components/HomePage/FeaturedProducts";
 import img1 from "../images/CoverLeo.jpg";
 import LeoLogo from "../images/LeoLife01.jpg";
 import HeroSectionImg from "../Components/HerSectionImg";
+
 function Home() {
   return (
     <>

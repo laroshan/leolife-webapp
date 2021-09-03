@@ -11,10 +11,13 @@ import Default from "./pages/Default";
 import Footer from "./Components/Footer";
 import Contact from "./pages/Contact";
 
+import ScrollToTop from "./Components/ScrollToTop";
+
 function App() {
   return (
     <div className="app">
       <Navbar />
+      <ScrollToTop />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
@@ -24,6 +27,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route component={Default} />
       </Switch>
+
       <Footer />
     </div>
   );

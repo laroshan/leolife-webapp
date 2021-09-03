@@ -3,17 +3,22 @@ import { ProductConsumer } from "../../context/context";
 import Product from "../Product";
 import TitleComponent from "../TitleComponent";
 import { Link } from "react-router-dom";
+import Spinner from "../Spinner";
+import GoToTop from "../ScrollToTop";
 // import CustomCard from "../MaterialProduct";
 
 function FeaturedProducts() {
   return (
     <div className="py-3">
+      <GoToTop />
       <div className="container">
         <TitleComponent title={"Featured Products"} center={true} />
         <div className="row my-5">
           <ProductConsumer>
             {(value) => {
               const { storedProducts } = value;
+
+              if (!storedProducts.length) return <Spinner />;
               return storedProducts
                 .filter((filterproduct) => filterproduct.sku === "hello")
                 .map(

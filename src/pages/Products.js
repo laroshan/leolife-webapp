@@ -6,7 +6,7 @@ import { ProductConsumer } from "../context/context";
 import TitleComponent from "../Components/TitleComponent";
 import styled from "styled-components";
 import Product from "../Components/Product";
-
+import Spinner from "../Components/Spinner";
 function Products() {
   return (
     <div>
@@ -17,6 +17,7 @@ function Products() {
         <ProductConsumer>
           {(value) => {
             const { categories } = value;
+            if (!categories.length) return <Spinner />;
             return (
               <ProductsWrapper className="py-3 px-0">
                 {categories.map((category, index) => {

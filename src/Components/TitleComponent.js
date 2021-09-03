@@ -18,7 +18,7 @@ const TitleWrapper = styled.div`
   .title-under-line {
     height: 0.25rem;
     width: 7rem;
-    background: var(--primaryColor);
+    background: var(--Goldenwheat);
     margin: ${(props) => (props.center ? "0 auto" : "0")};
   }
 `;
