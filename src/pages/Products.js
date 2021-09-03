@@ -7,11 +7,14 @@ import TitleComponent from "../Components/TitleComponent";
 import styled from "styled-components";
 import Product from "../Components/Product";
 import Spinner from "../Components/Spinner";
+import FilterProduct from "../Components/FilterProduct";
 function Products() {
   return (
     <div>
       <HeroSectionImg img={ProductBcg} max={false} mobImg={mobileBg} />
+
       <div className="container-fluid py-4 ">
+        {/* <FilterProduct /> */}
         <TitleComponent title={"Our Products"} center={true} />
 
         <ProductConsumer>
