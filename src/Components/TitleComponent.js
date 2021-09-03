@@ -3,7 +3,7 @@ import styled from "styled-components";
 function TitleComponent({ title, center }) {
   return (
     <TitleWrapper className="row" center={center}>
-      <div className="col">
+      <div className="col-6 mx-auto col-sm-8 col-md-6 col-lg-3">
         <h2 className="text-title">{title}</h2>
         <div className="title-under-line" />
       </div>

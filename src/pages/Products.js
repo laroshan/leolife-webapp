@@ -22,23 +22,26 @@ function Products() {
             const { categories } = value;
             if (!categories.length) return <Spinner />;
             return (
-              <ProductsWrapper className="py-3 px-0">
+              <ProductsWrapper className="py-3">
                 {categories.map((category, index) => {
                   return (
                     <div
-                      className="row py-5 "
+                      className="row py-2 "
                       style={{
                         background: index % 2 === 0 ? "#2b6777" : "#c8d8e4",
                       }}
                     >
-                      <h2
-                        className="text-title"
-                        style={{
-                          color: index % 2 === 0 ? "#c8d8e4" : "#2b6777",
-                        }}
-                      >
-                        {category.name}
-                      </h2>
+                      <div className="row">
+                        <h2
+                          className="text-title"
+                          style={{
+                            color: index % 2 === 0 ? "#c8d8e4" : "#2b6777",
+                          }}
+                        >
+                          {category.name}
+                        </h2>
+                      </div>
+
                       {category.productsData.map((product) => {
                         return <Product key={product.id} product={product} />;
                       })}
