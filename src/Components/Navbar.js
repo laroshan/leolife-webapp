@@ -34,7 +34,7 @@ function Navbar() {
       <nav className="navbars">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img src={LeoLogo} alt="logo" className="logo-img" />
-          LD LeoLife
+          <div className="logo-txt"> LD LeoLife</div>
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <FontAwesomeIcon icon={click ? faTimes : faBars} />

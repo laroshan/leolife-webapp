@@ -29,6 +29,10 @@
   display: flex;
   align-items: center;
 }
+.navbar-logo:hover {
+  color: var(--SoftWheat);
+}
+
 /* img {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -74,6 +78,7 @@
 .nav-links:hover {
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
+  color: var(--SoftWheat);
 }
 
 .fa-bars {
