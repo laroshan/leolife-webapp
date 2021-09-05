@@ -55,9 +55,9 @@ function SingleProductPage() {
                   <h5 className="text-capitalize mb-4 text-cls">
                     Company : {singleProduct.seo.title}
                   </h5>
-                  <h5 className="text-main text-capitalize mb-4 text-cls">
+                  {/* <h5 className="text-main text-capitalize mb-4 text-cls">
                     price: {singleProduct.price.formatted}Rs
-                  </h5>
+                  </h5> */}
                   <p className="text-capitalize text-title mt-3 abt-info">
                     Some info about product:
                   </p>
@@ -72,9 +72,9 @@ function SingleProductPage() {
                           <h5 className="text-main text-capitalize mb-1 d-flex justify-content-center variant-txt">
                             {variant.name}
                           </h5>
-                          <h5 className="text-main text-capitalize mb-1 d-flex justify-content-center variant-txt">
+                          {/* <h5 className="text-main text-capitalize mb-1 d-flex justify-content-center variant-txt">
                             {variant.price.formatted} Rs
-                          </h5>
+                          </h5> */}
                         </div>
                       ))}
                     </div>
@@ -142,7 +142,7 @@ const SingleProductWrapper = styled.div`
 
   .variant-txt {
     font-weight: 500;
-    font-size: 25px;
+    font-size: 30px;
   }
 
   @media screen and (max-width: 960px) {

@@ -15,6 +15,8 @@ class ProductProvider extends Component {
     featuredProducts: [],
     singleProduct: [],
     loading: true,
+    search: "",
+    category: "all",
   };
 
   componentDidMount() {
@@ -27,7 +29,7 @@ class ProductProvider extends Component {
       .list({ limit: 200 })
       .then((products) => {
         const storedProducts = products.data;
-
+        // console.log(storedProducts);
         this.setState({
           storedProducts,
         });
@@ -55,6 +57,7 @@ class ProductProvider extends Component {
     this.setState({
       categories: productsPerCategory,
     });
+    // console.log(categories);
   }
 
   setSingleProduct = (id) => {
@@ -78,12 +81,60 @@ class ProductProvider extends Component {
     return product;
   };
 
+  //handle filtering
+  handleChange = (event) => {
+    const name = event.target.name;
+    console.log(name);
+    const value =
+      event.target.type === "checkbox"
+        ? event.target.checked
+        : event.target.value;
+    this.setState(
+      {
+        [name]: value,
+      },
+
+      this.sortData
+    );
+  };
+  sortData = () => {
+    const { categories, category } = this.state;
+
+    let tempProducts = [...categories];
+
+    // filtering based on category
+    if (category !== "all") {
+      tempProducts = tempProducts.filter((item) => item.name === category);
+    }
+
+    // if (search.length > 0) {
+    //   tempProducts = tempProducts.filter((item) => {
+    //     let tempSearch = search.toLowerCase();
+    //     let tempTitle = item.name.toLowerCase().slice(0, search.length);
+    //     if (tempSearch === tempTitle) {
+    //       return item;
+    //     }
+    //   });
+    // }
+    let tempList = [];
+    tempProducts.map((item) => {
+      tempList = item.productsData;
+    });
+    console.log(tempList);
+
+    this.setState({
+      filteredProducts: tempProducts,
+    });
+    console.log(this.state.filteredProducts);
+  };
+
   render() {
     return (
       <ProductContext.Provider
         value={{
           ...this.state,
           setSingleProduct: this.setSingleProduct,
+          handleChange: this.handleChange,
         }}
       >
         {this.props.children}

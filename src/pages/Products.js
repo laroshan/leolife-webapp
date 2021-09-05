@@ -14,40 +14,70 @@ function Products() {
       <HeroSectionImg img={ProductBcg} max={false} mobImg={mobileBg} />
 
       <div className="container-fluid py-4 ">
-        {/* <FilterProduct /> */}
+        <FilterProduct />
         <TitleComponent title={"Our Products"} center={true} />
 
         <ProductConsumer>
           {(value) => {
-            const { categories } = value;
+            const { categories, filteredProducts } = value;
             if (!categories.length) return <Spinner />;
             return (
               <ProductsWrapper className="py-3">
-                {categories.map((category, index) => {
-                  return (
-                    <div
-                      className="row py-2 "
-                      style={{
-                        background: index % 2 === 0 ? "#2b6777" : "#c8d8e4",
-                      }}
-                    >
-                      <div className="row">
-                        <h2
-                          className="text-title"
+                {filteredProducts.length <= 0
+                  ? categories.map((category, index) => {
+                      return (
+                        <div
+                          className="row py-2 "
                           style={{
-                            color: index % 2 === 0 ? "#c8d8e4" : "#2b6777",
+                            background: index % 2 === 0 ? "#2b6777" : "#c8d8e4",
                           }}
                         >
-                          {category.name}
-                        </h2>
-                      </div>
+                          <div className="row">
+                            <h2
+                              className="text-title"
+                              style={{
+                                color: index % 2 === 0 ? "#c8d8e4" : "#2b6777",
+                              }}
+                            >
+                              {category.name}
+                            </h2>
+                          </div>
 
-                      {category.productsData.map((product) => {
-                        return <Product key={product.id} product={product} />;
-                      })}
-                    </div>
-                  );
-                })}
+                          {category.productsData.map((product) => {
+                            return (
+                              <Product key={product.id} product={product} />
+                            );
+                          })}
+                        </div>
+                      );
+                    })
+                  : filteredProducts.map((category, index) => {
+                      return (
+                        <div
+                          className="row py-2 "
+                          style={{
+                            background: index % 2 === 0 ? "#2b6777" : "#c8d8e4",
+                          }}
+                        >
+                          <div className="row">
+                            <h2
+                              className="text-title"
+                              style={{
+                                color: index % 2 === 0 ? "#c8d8e4" : "#2b6777",
+                              }}
+                            >
+                              {category.name}
+                            </h2>
+                          </div>
+
+                          {category.productsData.map((product) => {
+                            return (
+                              <Product key={product.id} product={product} />
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
               </ProductsWrapper>
             );
           }}

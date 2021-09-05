@@ -28,9 +28,11 @@ function Product({ product }) {
                   />
                 </div>
               </Link>
-              <div className="card-body d-flex justify-content-between">
-                <p className="mb-0">{product.name}</p>
-                <p className="mb-0 price">{product.price.formatted}</p>
+              <div className="card-body d-flex justify-content-center">
+                {/* <p className="mb-0"> */}
+                {product.name}
+                {/* </p> */}
+                {/* <p className="mb-0 price">{product.price.formatted}</p> */}
               </div>
             </div>
           </ProductWrapper>
@@ -94,7 +96,7 @@ const ProductWrapper = styled.div`
     }
 
     .card-body {
-      font-size: 12px;
+      font-size: 14px;
     }
     .price {
       font-size: 11px;
