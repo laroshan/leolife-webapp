@@ -13,7 +13,7 @@ function FeaturedProducts() {
       <GoToTop />
       <div className="container">
         <TitleComponent title={"Featured Products"} center={true} />
-        <div className="row my-5">
+        <div className="row my-3">
           <ProductConsumer>
             {(value) => {
               const { storedProducts } = value;

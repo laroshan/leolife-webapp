@@ -35,6 +35,7 @@ const HeroWrapper = styled.div`
   @media screen and (max-width: 960px) {
     background: linear-gradient(var(--primaryRGBA), var(--primaryRGBA)),
       url(${(props) => props.mobImg}) center/cover no-repeat;
+    min-height: ${(props) => (props.max ? "50vh" : "35vh")};
   }
 `;
 

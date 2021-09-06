@@ -190,9 +190,9 @@ export default function FilterProduct() {
 }
 
 const FilterWrapper = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-column-gap: 2rem;
+  grid-column-gap: 2rem; */
   /* grid-row-gap: 1rem; */
   label {
     font-weight: bold;

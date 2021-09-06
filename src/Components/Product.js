@@ -47,7 +47,7 @@ export default Product;
 const ProductWrapper = styled.div`
   .card {
     background-color: var(--mainWhite);
-    color: var(--SoftWheat);
+    color: #7f8879;
     font-weight: bold;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
     transition: var(--mainTransition);
