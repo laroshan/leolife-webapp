@@ -85,7 +85,7 @@ const InfoWrapper = styled.div`
   }
 
   .text-main {
-    font-size: 20px;
+    font-size: 19px;
     justify-content: baseline;
     align-items: baseline;
     font-weight: 500;
