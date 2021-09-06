@@ -19,7 +19,7 @@ function SingleProductPage() {
           }
           // const { getSingleProduct } = value;
           // const singleProduct = getSingleProduct();
-          console.log(singleProduct);
+          // console.log(singleProduct);
           const imagesArray = singleProduct.assets.map((images) => images.url);
           let variants = [];
           if (singleProduct.variant_groups.length > 0) {

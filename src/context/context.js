@@ -84,7 +84,7 @@ class ProductProvider extends Component {
   //handle filtering
   handleChange = (event) => {
     const name = event.target.name;
-    console.log(name);
+    // console.log(name);
     const value =
       event.target.type === "checkbox"
         ? event.target.checked
@@ -120,12 +120,12 @@ class ProductProvider extends Component {
     tempProducts.map((item) => {
       tempList = item.productsData;
     });
-    console.log(tempList);
+    // console.log(tempList);
 
     this.setState({
       filteredProducts: tempProducts,
     });
-    console.log(this.state.filteredProducts);
+    // console.log(this.state.filteredProducts);
   };
 
   render() {
