@@ -31,7 +31,7 @@ function FeaturedProducts() {
           </ProductConsumer>
         </div>
         <div className="row mt-5">
-          <div className="col text-center my-5">
+          <div className="col text-center my-3">
             <Link to="/products" className="main-link">
               More Products
             </Link>

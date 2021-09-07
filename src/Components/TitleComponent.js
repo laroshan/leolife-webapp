@@ -15,6 +15,7 @@ export default TitleComponent;
 
 const TitleWrapper = styled.div`
   text-align: ${(props) => (props.center ? "center" : "left")};
+  color: #7f8879;
   .title-under-line {
     height: 0.25rem;
     width: 7rem;

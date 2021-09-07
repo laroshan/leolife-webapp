@@ -20,7 +20,10 @@
 }
 
 .app {
-  background: var(--Lightgrey);
+  background: var(--mainWhite);
+  @media screen and (max-width: 960px) {
+    background: var(--Lightgrey);
+  }
 }
 
 .main-link {
