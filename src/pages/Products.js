@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSectionImg from "../Components/HerSectionImg";
 import ProductBcg from "../images/cleaningheader.png";
+import img3 from "../images/curaten.jpeg";
 import mobileBg from "../images/colorful-cleaning.jpg";
 import { ProductConsumer } from "../context/context";
 import TitleComponent from "../Components/TitleComponent";
@@ -11,7 +12,7 @@ import FilterProduct from "../Components/FilterProduct";
 function Products() {
   return (
     <div>
-      <HeroSectionImg img={ProductBcg} max={false} mobImg={mobileBg} />
+      <HeroSectionImg img={img3} max={false} mobImg={mobileBg} />
 
       <div className="container-fluid py-4 ">
         <FilterProduct />

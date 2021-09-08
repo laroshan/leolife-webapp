@@ -58,8 +58,8 @@ function SingleProductPage() {
                   {/* <h5 className="text-main text-capitalize mb-4 text-cls">
                     price: {singleProduct.price.formatted}Rs
                   </h5> */}
-                  <p className="text-capitalize text-title mt-3 abt-info">
-                    Some info about product:
+                  <p className="text-capitalize text-title mt-2 abt-info">
+                    Description:
                   </p>
                   <p className="text-main description">
                     {singleProduct.description.replace(/<[^>]+>/g, "")}
@@ -158,7 +158,7 @@ const SingleProductWrapper = styled.div`
   }
 
   .variants {
-    border: 5px solid var(--sideBg);
+    border: 5px solid var(--SoftWheat);
     border-radius: 10%;
   }
 
@@ -196,14 +196,14 @@ const SingleProductWrapper = styled.div`
     }
     .description {
       font-size: 17px;
-      color: var(--Softwheat);
+      color: var(--SoftWheat);
     }
     .col-text {
       padding: 0px;
     }
 
     .variants {
-      border: 4px solid var(--sideBg);
+      border: 5px solid var(--SoftWheat);
       border-radius: 10%;
     }
 

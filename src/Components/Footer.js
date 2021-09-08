@@ -99,6 +99,20 @@ const FooterContainer = styled.footer`
     color: #d4af37;
   }
   .footer-bottom {
+    background: #ba8b02; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #181818,
+      #ba8b02
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #181818,
+      #ba8b02
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding-top: 2rem;
     padding-bottom: 1rem;
   }
@@ -121,9 +135,36 @@ const FooterContainer = styled.footer`
   a:hover {
     border-bottom: 2px solid var(--SecondhandGrey);
     transition: all 0.2s ease-out;
+    background: #ba8b02; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #181818,
+      #ba8b02
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #181818,
+      #ba8b02
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   h4 {
-    color: var(--GoldenWheat);
+    background: #ba8b02; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #181818,
+      #ba8b02
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #181818,
+      #ba8b02
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;

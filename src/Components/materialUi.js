@@ -7,7 +7,7 @@ import img1 from "../images/kitchen.jpg";
 import img2 from "../images/colorful-cleaning.jpg";
 import img3 from "../images/curaten.jpeg";
 import img4 from "../images/cooking.jpg";
-import "./global.scss";
+// import "./global.scss";
 import {
   Card,
   CardContent,
@@ -156,21 +156,21 @@ class BannerExample extends React.Component {
             cycleNavigation={this.state.cycleNavigation}
             navButtonsAlwaysVisible={this.state.navButtonsAlwaysVisible}
             navButtonsAlwaysInvisible={this.state.navButtonsAlwaysInvisible}
-            next={(now, previous) =>
-              console.log(
-                `Next User Callback: Now displaying child${now}. Previously displayed child${previous}`
-              )
-            }
-            prev={(now, previous) =>
-              console.log(
-                `Prev User Callback: Now displaying child${now}. Previously displayed child${previous}`
-              )
-            }
-            onChange={(now, previous) =>
-              console.log(
-                `OnChange User Callback: Now displaying child${now}. Previously displayed child${previous}`
-              )
-            }
+            // next={(now, previous) =>
+            //   console.log(
+            //     `Next User Callback: Now displaying child${now}. Previously displayed child${previous}`
+            //   )
+            // }
+            // prev={(now, previous) =>
+            //   console.log(
+            //     `Prev User Callback: Now displaying child${now}. Previously displayed child${previous}`
+            //   )
+            // }
+            // onChange={(now, previous) =>
+            //   console.log(
+            //     `OnChange User Callback: Now displaying child${now}. Previously displayed child${previous}`
+            //   )
+            // }
             //   fullHeightHover={false}
             //   navButtonsProps={{
             //     style: { backgroundColor: "cornflowerblue", borderRadius: 0 },

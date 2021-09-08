@@ -7,9 +7,7 @@ import FeaturedProducts from "../Components/HomePage/FeaturedProducts";
 import img1 from "../images/CoverLeo.jpg";
 import LeoLogo from "../images/LeoLife01.jpg";
 import HeroSectionImg from "../Components/HerSectionImg";
-import CarouselComp from "../Components/CarouselComp";
-import Sliderss from "../Components/Sliderss";
-import MaterialCarousel from "../Components/MaterialCarousel";
+
 import BannerExample from "../Components/materialUi";
 
 function Home() {
@@ -29,7 +27,7 @@ function Home() {
 
     window.addEventListener("resize", handleResize);
   });
-  console.log(dimensions);
+  // console.log(dimensions);
   return dimensions.width > 960 ? (
     <>
       {/* <CarouselComp /> */}
