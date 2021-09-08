@@ -1,6 +1,18 @@
 .navbars {
   /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%); */
-  background: var(--Whitish);
+  /* background: var(--Whitish); */
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   height: 80px;
   display: flex;
   justify-content: center;
@@ -20,7 +32,8 @@
 }
 
 .navbar-logo {
-  color: var(--Goldenwheat);
+  color: #fff;
+
   justify-self: start;
   margin-left: 0px;
   cursor: pointer;
@@ -28,6 +41,23 @@
   font-size: 1.8rem;
   display: flex;
   align-items: center;
+}
+.logo-txt {
+  background: #ba8b02; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #181818,
+    #ba8b02
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #181818,
+    #ba8b02
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .navbar-logo:hover {
   color: var(--SoftWheat);
@@ -67,7 +97,20 @@
 }
 
 .nav-links {
-  color: var(--Goldenwheat);
+  background: #ba8b02; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #181818,
+    #ba8b02
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #181818,
+    #ba8b02
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: flex;
   align-items: center;
   text-decoration: none;

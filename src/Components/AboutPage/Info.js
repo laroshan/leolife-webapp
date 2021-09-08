@@ -77,6 +77,7 @@ function Info() {
 export default Info;
 
 const InfoWrapper = styled.div`
+  color: var(--SoftWheat);
   .text-lead {
     font-size: 25px;
     justify-content: baseline;
@@ -92,7 +93,7 @@ const InfoWrapper = styled.div`
   }
 
   .info-quote {
-    color: var(--mainBg);
+    color: var(--Whitish);
     font-weight: 900;
     font-size: 30px;
     padding-bottom: 15px;

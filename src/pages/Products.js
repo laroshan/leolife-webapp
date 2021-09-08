@@ -29,14 +29,22 @@ function Products() {
                         <div
                           className="row py-2 "
                           style={{
-                            background: index % 2 === 0 ? "#2b6777" : "#c8d8e4",
+                            background: index % 2 === 0 ? "#1e130c" : "#232526",
+                            background:
+                              index % 2 === 0
+                                ? "-webkit-linear-gradient(to bottom, #9a8478, #1e130c)"
+                                : "-webkit-linear-gradient(to bottom, #414345, #232526)",
+                            background:
+                              index % 2 === 0
+                                ? "linear-gradient(to bottom, #9a8478, #1e130c)"
+                                : "linear-gradient(to bottom, #414345, #232526)",
                           }}
                         >
                           <div className="row">
                             <h2
                               className="text-title"
                               style={{
-                                color: index % 2 === 0 ? "#c8d8e4" : "#2b6777",
+                                color: index % 2 === 0 ? "#232526" : "#1e130c",
                               }}
                             >
                               {category.name}
@@ -56,14 +64,22 @@ function Products() {
                         <div
                           className="row py-2 "
                           style={{
-                            background: index % 2 === 0 ? "#2b6777" : "#c8d8e4",
+                            background: index % 2 === 0 ? "#1e130c" : "#232526",
+                            background:
+                              index % 2 === 0
+                                ? "-webkit-linear-gradient(to bottom, #9a8478, #1e130c)"
+                                : "-webkit-linear-gradient(to bottom, #414345, #232526)",
+                            background:
+                              index % 2 === 0
+                                ? "linear-gradient(to bottom, #9a8478, #1e130c)"
+                                : "linear-gradient(to bottom, #414345, #232526)",
                           }}
                         >
                           <div className="row">
                             <h2
                               className="text-title"
                               style={{
-                                color: index % 2 === 0 ? "#c8d8e4" : "#2b6777",
+                                color: index % 2 !== 0 ? "#232526" : "#1e130c",
                               }}
                             >
                               {category.name}

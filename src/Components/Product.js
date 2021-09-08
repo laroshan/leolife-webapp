@@ -46,7 +46,18 @@ export default Product;
 
 const ProductWrapper = styled.div`
   .card {
-    background-color: var(--mainWhite);
+    background: #ece9e6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #ffffff,
+      #ece9e6
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #ffffff,
+      #ece9e6
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     color: #7f8879;
     font-weight: bold;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);

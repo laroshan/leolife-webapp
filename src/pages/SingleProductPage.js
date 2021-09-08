@@ -102,18 +102,40 @@ function SingleProductPage() {
 export default SingleProductPage;
 
 const SingleProductWrapper = styled.div`
-  background: var(--mainBg);
+  background: #d1913c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffd194,
+    #d1913c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffd194,
+    #d1913c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   img {
     height: 100%;
     /* object-fit: cover; */
   }
   .img-window {
-    background: var(--sideBg);
+    /* background: var(--sideBg); */
+    background: #ece9e6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #ffffff,
+      #ece9e6
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #ffffff,
+      #ece9e6
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   .product-name {
     font-size: 40px;
-    color: var(--sideBg);
+    color: var(--Goldenwheat);
     font-weight: bolder;
   }
 
@@ -122,17 +144,17 @@ const SingleProductWrapper = styled.div`
   }
   .text-cls {
     font-size: 25px;
-    color: var(--sideBg);
+    color: var(--Goldenwheat);
   }
 
   .abt-info {
     font-size: 35px;
-    color: var(--LightGrey);
+    color: var(--Goldenwheat);
     font-weight: 700;
   }
   .description {
     font-size: 30px;
-    color: var(--Slate);
+    color: var(--SoftWheat);
   }
 
   .variants {
@@ -151,28 +173,30 @@ const SingleProductWrapper = styled.div`
       /* object-fit: cover; */
     }
     .img-window {
-      background: var(--mainBg);
+      background: transparent;
+      /* background: -webkit-linear-gradient(to bottom, #ffd194, #d1913c);
+      background: linear-gradient(to bottom, #ffd194, #d1913c); */
     }
 
     .product-name {
       font-size: 30px;
-      color: var(--sideBg);
+      color: var(--Goldenwheat);
       font-weight: bolder;
     }
 
     .text-cls {
       font-size: 15px;
-      color: var(--sideBg);
+      color: var(--Goldenwheat);
     }
 
     .abt-info {
       font-size: 20px;
-      color: var(--LightGrey);
+      color: var(--Goldenwheat);
       font-weight: 700;
     }
     .description {
       font-size: 17px;
-      color: var(--Slate);
+      color: var(--Softwheat);
     }
     .col-text {
       padding: 0px;

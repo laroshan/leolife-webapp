@@ -86,23 +86,44 @@ function Footer() {
 export default Footer;
 
 const FooterContainer = styled.footer`
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #434343, #000000);
   .footer-middle {
-    background: var(--Whitish);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding-top: 2rem;
-    color: var(--Goldenwheat);
+    color: #d4af37;
   }
   .footer-bottom {
     padding-top: 2rem;
     padding-bottom: 1rem;
   }
+  li {
+    /* background: #ba8b02; 
+    background: -webkit-linear-gradient(to bottom, #181818, #ba8b02);
+    background: linear-gradient(to bottom, #181818, #ba8b02);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: var(--Softheat);
+    text-decoration: none;
+  }
 
   ul li a {
-    color: var(--Goldenwheat);
+    color: var(--Softheat);
     text-decoration: none;
   }
 
   a:hover {
     border-bottom: 2px solid var(--SecondhandGrey);
     transition: all 0.2s ease-out;
+  }
+
+  h4 {
+    color: var(--GoldenWheat);
   }
 `;

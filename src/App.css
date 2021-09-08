@@ -20,18 +20,36 @@
 }
 
 .app {
-  background: var(--mainWhite);
-  @media screen and (max-width: 960px) {
-    background: var(--Lightgrey);
-  }
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .main-link {
   padding: 0.5rem 1rem;
   font-size: 2rem;
   text-transform: capitalize;
-  background: var(--sideBg);
-  color: var(--mainBg);
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: var(--Goldenwheat);
   display: inline-block;
   outline: 2px solid var(--sideBg);
   outline-offset: 4px;
