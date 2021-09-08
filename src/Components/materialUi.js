@@ -3,10 +3,10 @@ import Carousel from "react-material-ui-carousel";
 import autoBind from "auto-bind";
 // import "../style/Example.scss";
 import styled from "styled-components";
-import img1 from "../images/kitchen.jpg";
-import img2 from "../images/colorful-cleaning.jpg";
-import img3 from "../images/curaten.jpeg";
-import img4 from "../images/cooking.jpg";
+// import img1 from "../images/kitchen.jpg";
+// import img2 from "../images/colorful-cleaning.jpg";
+// import img3 from "../images/curaten.jpeg";
+// import img4 from "../images/cooking.jpg";
 // import "./global.scss";
 import {
   Card,

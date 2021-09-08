@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import HeroSection from "../Components/HeroSection";
 import FeaturedProducts from "../Components/HomePage/FeaturedProducts";
 // import video1 from "../videos/Trim2.mp4";
 // import video2 from "../videos/leolifevideo1.mp4";
@@ -30,20 +29,14 @@ function Home() {
   // console.log(dimensions);
   return dimensions.width > 960 ? (
     <>
-      {/* <CarouselComp /> */}
-      {/* <HeroSectionImg img={img1} max={true} mobImg={LeoLogo} /> */}
-      {/* <MaterialCarousel /> */}
       <BannerExample />
-      {/* <Sliderss /> */}
+
       <FeaturedProducts />
     </>
   ) : (
     <>
-      {/* <CarouselComp /> */}
       <HeroSectionImg img={img1} max={true} mobImg={LeoLogo} />
-      {/* <MaterialCarousel /> */}
-      {/* <BannerExample /> */}
-      {/* <Sliderss /> */}
+
       <FeaturedProducts />
     </>
   );
