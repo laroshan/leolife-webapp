@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import mainBcg from "../images/IMG_3.jpeg";
+import mainBcg from "../images/caution.jpg";
 
 function HeroSectionImg({ img, mobImg, title, max, children }) {
   return (
