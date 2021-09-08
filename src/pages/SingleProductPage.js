@@ -159,6 +159,7 @@ const SingleProductWrapper = styled.div`
 
   .variants {
     border: 5px solid var(--SoftWheat);
+    color: var(--Whitish);
     border-radius: 10%;
   }
 
@@ -209,6 +210,7 @@ const SingleProductWrapper = styled.div`
 
     .variant-txt {
       font-weight: 500;
+      color: var(--Whitish);
       font-size: 15px;
     }
 

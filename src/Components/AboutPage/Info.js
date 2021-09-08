@@ -30,8 +30,6 @@ function Info() {
               "Happiness is a Clean & Oragnized Home"
             </p>
             <p className="text-lead ">
-              <strong>We’re driven by our purpose:</strong> to make sustainable
-              living commonplace. <br />
               We aim to provide home care products for your every kind of need
               to setup your home as a better place.
             </p>
