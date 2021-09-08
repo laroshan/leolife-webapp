@@ -51,8 +51,14 @@ function Contact() {
               <div className="form-group">
                 <input
                   type="submit"
-                  value="send"
+                  value="Send"
                   className="form-control bg-primary text-white"
+                  style={{
+                    background: "#000000",
+                    background:
+                      "-webkit-linear-gradient(to bottom, #434343,#000000  )",
+                    background: " linear-gradient(to bottom,#434343, #000000 )",
+                  }}
                 ></input>
               </div>
             </form>
