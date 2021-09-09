@@ -149,7 +149,7 @@ const FooterContainer = styled.footer`
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     -webkit-background-clip: text;
-    background-clip: border-box;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
