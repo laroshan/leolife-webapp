@@ -193,8 +193,6 @@ class BannerExample extends React.Component {
 export default BannerExample;
 
 const BannerWrapper = styled.div`
-  @import "global";
-
   .Banner {
     height: 400px;
     position: relative;
@@ -227,14 +225,14 @@ const BannerWrapper = styled.div`
         }
 
         transition: 300ms;
-        cursor: pointer;
+        /* cursor: pointer;
         &:hover {
           opacity: 0.8;
-        }
+        } */
       }
 
       transition: 300ms;
-      cursor: pointer;
+      /* cursor: pointer; */
       &:hover {
         filter: brightness(115%);
       }
@@ -261,7 +259,7 @@ const BannerWrapper = styled.div`
 
       position: relative;
 
-      cursor: pointer;
+      /* cursor: pointer; */
 
       padding: 30px;
 
@@ -270,11 +268,6 @@ const BannerWrapper = styled.div`
       &:hover,
       &:active {
         background-color: rgb(87, 17, 17);
-
-        .ViewButton {
-          background-color: rgb(241, 241, 241);
-          color: rgb(119, 24, 24);
-        }
       }
 
       .Title {

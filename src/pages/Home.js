@@ -13,13 +13,11 @@ function Home() {
   // const [mobile, Setmobile] = useState(false);
   // let width = window.innerWidth;
   const [dimensions, setDimensions] = React.useState({
-    height: window.innerHeight,
     width: window.innerWidth,
   });
   React.useEffect(() => {
     function handleResize() {
       setDimensions({
-        height: window.innerHeight,
         width: window.innerWidth,
       });
     }
@@ -30,7 +28,6 @@ function Home() {
   return dimensions.width > 960 ? (
     <>
       <BannerExample />
-
       <FeaturedProducts />
     </>
   ) : (
