@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSectionImg from "../Components/HerSectionImg";
-import ProductBcg from "../images/cleaningheader.png";
+
 import img3 from "../images/curaten.jpeg";
 import mobileBg from "../images/colorful-cleaning.jpg";
 import { ProductConsumer } from "../context/context";

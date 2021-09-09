@@ -104,7 +104,7 @@ const items = [
   {
     Name: "Home Care Products",
     Caption:
-      "We’re reimagining the future of cleaning and it starts with reinventing a century-old history of chemistry. From what goes into our cleaning and laundry products to the way we package them, we’re changing it all, to give people high-performing, affordable products that are kinder to them and the planet. Clean home. Clean planet. Clean Future.",
+      "We’re reimagining the future of cleaning. From what goes into our cleaning and laundry products, to give people high-performing, affordable products that are kinder to them and the planet. Clean home. Clean planet. Clean Future.",
     contentPosition: "right",
     Items: [
       {
@@ -298,6 +298,7 @@ const BannerWrapper = styled.div`
         ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 

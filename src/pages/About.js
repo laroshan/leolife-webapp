@@ -1,7 +1,6 @@
 import React from "react";
 import Info from "../Components/AboutPage/Info";
 import HeroSectionImg from "../Components/HerSectionImg";
-import LeoLogo from "../images/LeoLife01.jpg";
 import Quote from "../images/caution.jpg";
 
 function about() {

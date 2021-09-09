@@ -49,7 +49,6 @@ const ProductWrapper = styled.div`
     background: #ece9e6;
     background: -webkit-linear-gradient(to bottom, #ffffff, #ece9e6);
     background: linear-gradient(to bottom, #ffffff, #ece9e6);
-
     color: #7f8879;
     font-weight: bold;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
