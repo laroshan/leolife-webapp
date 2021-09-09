@@ -25,7 +25,7 @@ function Home() {
     }
 
     window.addEventListener("resize", handleResize);
-  });
+  }, []);
   // console.log(dimensions);
   return dimensions.width > 960 ? (
     <>
