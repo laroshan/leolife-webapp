@@ -60,13 +60,13 @@ function Footer() {
                       </a>
                     </i>
                   </li>
-                  <li>
+                  {/* <li>
                     <i class="fa fa-instagram" aria-hidden="true">
                       <a href="https://www.instagram.com" target="_blank">
                         Instagram
                       </a>
                     </i>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
